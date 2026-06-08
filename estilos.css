@@ -1,0 +1,457 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lora", serif;
+    font-style: normal;
+}
+body{
+    background-color: rgb(255, 224, 184);
+    padding-top: 5% ;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2%;
+}
+
+.logo{
+    color: rgb(0, 0, 0);
+    font-size: 1em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 40px 0 0 40px;
+    height: 10vh;
+    width: 65vw;
+}
+
+menu{
+    color: rgb(0, 0, 0);
+    font-size: 1.1em;
+    display: flex;
+    gap: 40px;
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 0.5fr;
+    grid-template-areas: " titulo img" " texto img" " botao img";
+    padding-left: 5%;
+}
+
+.imagem2{
+    display: grid;
+    grid-area: img;
+    justify-content: center;
+    
+}
+.imagem{
+    margin-left: 3vw;
+    width: 60vw;
+}
+
+h2{
+    display: grid;
+    grid-area: titulo;
+    align-items: center;
+    font-size: 3em;
+}
+
+p{
+    display: grid;
+    grid-area: texto;
+    justify-content: center;    
+}
+.texto{
+    margin-bottom: 10%;
+}
+
+button{
+    display: grid;
+    grid-area: botao;
+    width: 180px;
+    height: 5vh;
+    background-color: orange;
+    border: none;
+    border-radius: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+footer{
+    height: auto;
+    background-color: orange;
+}
+
+.service{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: " titulo primeiro segundo" 
+    " final terceiro quarto";
+    padding: 5%;
+    gap: 30px;
+}
+
+.titulo_composto{
+    grid-area: titulo;
+    justify-content: left;
+}
+
+.primeiro{
+    grid-area: primeiro;
+    justify-content: left;
+    align-items: center;
+}
+
+.segundo{
+    grid-area: segundo;
+    justify-content: left;
+    align-items: center;
+}
+
+.terceiro{
+    grid-area: terceiro;
+    justify-content: left;
+    align-items: center;
+}
+
+.quarto{
+    grid-area: quarto;
+    justify-content: left;
+    align-items: center;
+}
+
+.final{
+    grid-area: final;
+    justify-content: left;
+    align-items: center;
+}
+
+@media(max-width: 1024px){
+    header{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "logo" "menu";
+        justify-content: center;
+        align-items: center;
+        padding-left: 2%;
+    }
+    
+    .logo{
+        color: rgb(0, 0, 0);
+        font-size: 0.8em;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        grid-area: logo;
+        justify-content: center;
+    }
+    
+    .menu{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        align-items: center;
+        gap: 10px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 40px 40px 40px 40px;
+        height: 10vh;
+        width: 80vw;
+        grid-area: menu;
+    }
+    
+    menu{
+        color: rgb(0, 0, 0);
+        font-size: 0.9em;
+        display: flex;
+        gap: 20px;
+        text-decoration: none;
+    }
+    
+    a{
+        text-decoration: none;
+    }
+    
+    main{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1.5fr 1fr 0.5fr 3fr;
+        grid-template-areas: " titulo" " texto" " botao" " img";
+        margin: 0;
+        padding: 0;
+    }
+    
+    .imagem2{
+        display: grid;
+        grid-area: img;
+        justify-content: center;
+        
+    }
+    
+    .imagem{
+        height: 800px;
+        width: 100vw;
+        margin: 0;
+    }
+    
+    h2{
+        display: grid;
+        grid-area: titulo;
+        align-items: center;
+        font-size: 3em;
+        justify-content: center;
+    }
+    
+    p{
+        display: grid;
+        grid-area: texto;
+        justify-content: center;
+    }
+    .texto{
+        margin-bottom: 10%;
+        justify-content: center;
+        padding-left: 8vw;
+        padding-right: 8vw;
+    }
+    
+    button{
+        display: grid;
+        grid-area: botao;
+        width: 180px;
+        height: 5vh;
+        background-color: orange;
+        border: none;
+        border-radius: 40px;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    
+    footer{
+        height: auto;
+        width: 100vw;
+        background-color: orange;
+    }
+    
+    .service{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: " titulo titulo" 
+        " primeiro segundo " " terceiro quarto ";
+        padding: 5%;
+        gap: 30px;
+    }
+    
+    .titulo_composto{
+        grid-area: titulo;
+        justify-content: left;
+    }
+    
+    .primeiro{
+        grid-area: primeiro;
+        justify-content: left;
+        align-items: center;
+    }
+    
+    .segundo{
+        grid-area: segundo;
+        justify-content: left;
+        align-items: center;
+    }
+    
+    .terceiro{
+        grid-area: terceiro;
+        justify-content: left;
+        align-items: center;
+    }
+    
+    .quarto{
+        grid-area: quarto;
+        justify-content: left;
+        align-items: center;
+    }
+    
+    .final{
+        grid-area: final;
+        justify-content: left;
+        align-items: center;
+    }
+}
+
+
+@media(max-width: 550px){
+    header{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "logo" "menu";
+        justify-content: center;
+        align-items: center;
+        padding-left: 2%;
+    }
+    
+    .logo{
+        color: rgb(0, 0, 0);
+        font-size: 0.8em;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        grid-area: logo;
+        justify-content: center;
+    }
+    
+    .menu{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        align-items: center;
+        gap: 10px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 40px 40px 40px 40px;
+        height: 10vh;
+        width: 80vw;
+        grid-area: menu;
+    }
+    
+    menu{
+        color: rgb(0, 0, 0);
+        font-size: 0.9em;
+        display: flex;
+        gap: 20px;
+        text-decoration: none;
+    }
+    
+    a{
+        text-decoration: none;
+    }
+    
+    main{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1.5fr 1fr 0.5fr 3fr;
+        grid-template-areas: " titulo" " texto" " botao" " img";
+        margin: 0;
+        padding: 0;
+    }
+    
+    .imagem2{
+        display: grid;
+        grid-area: img;
+        justify-content: center;
+        
+    }
+    
+    .imagem{
+        height: 800px;
+        width: 100vw;
+        margin: 0;
+    }
+    
+    h2{
+        display: grid;
+        grid-area: titulo;
+        align-items: center;
+        font-size: 3em;
+        justify-content: center;
+    }
+    
+    p{
+        display: grid;
+        grid-area: texto;
+        justify-content: center;
+    }
+    .texto{
+        margin-bottom: 10%;
+        justify-content: center;
+        padding-left: 8vw;
+        padding-right: 8vw;
+    }
+    
+    button{
+        display: grid;
+        grid-area: botao;
+        width: 180px;
+        height: 5vh;
+        background-color: orange;
+        border: none;
+        border-radius: 40px;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    
+    footer{
+        height: auto;
+        width: 100vw;
+        background-color: orange;
+    }
+    
+    .service{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: " titulo titulo" 
+        " primeiro segundo " " terceiro quarto ";
+        padding: 5%;
+        gap: 30px;
+    }
+    
+    .titulo_composto{
+        grid-area: titulo;
+        justify-content: left;
+    }
+    
+    .primeiro{
+        grid-area: primeiro;
+        justify-content: left;
+        align-items: center;
+    }
+    
+    .segundo{
+        grid-area: segundo;
+        justify-content: left;
+        align-items: center;
+    }
+    
+    .terceiro{
+        grid-area: terceiro;
+        justify-content: left;
+        align-items: center;
+    }
+    
+    .quarto{
+        grid-area: quarto;
+        justify-content: left;
+        align-items: center;
+    }
+    
+    .final{
+        grid-area: final;
+        justify-content: left;
+        align-items: center;
+    }
+}
